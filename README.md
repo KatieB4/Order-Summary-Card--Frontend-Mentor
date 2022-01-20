@@ -15,7 +15,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Screenshot
 
-![](images/my-desktop-view-screenshot.png)
+(images/my-desktop-view-screenshot.png)
 
 
 ### Built With
@@ -71,5 +71,5 @@ button {
 
 ### Author
 
-- Website - Katie
+- Katie
 - Frontend Mentor - [@KatieB4](https://www.frontendmentor.io/profile/KatieB4)
