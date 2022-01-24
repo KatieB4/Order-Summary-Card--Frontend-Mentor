@@ -192,6 +192,10 @@ button {
 
 /* ---496px breakpoint--- */
 @media(max-width: 31em){
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+
   .order-summary-card {
     width: 33rem;
   }
@@ -215,12 +219,5 @@ button {
   .next-screen,
   .cancel {
     font-size: 1.4rem;
-  }
-}
-
-/* ---375px breakpoint--- */
-@media(max-width: 23.4375em){
-  body {
-    background-image: url("images/pattern-background-mobile.svg");
   }
 }
