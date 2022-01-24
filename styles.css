@@ -1,0 +1,225 @@
+/* 
+Font Sizes(px)
+* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Spacing System (px)
+* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(104, 2, 151, 0.5);
+}
+.next-screen:focus {
+  box-shadow: 0 0 0 0.7rem rgba(104, 2, 151, 0.5);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-position: center -13%;
+  background-repeat: no-repeat;
+  font-family: "Red Hat Display", sans-serif;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  /* position: relative; <---initially for use with absolute positioning on elements*/
+}
+
+button {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.order-summary-card {
+  background-color: #fff;
+  text-align: center;
+  width: 45rem;
+  border-radius: 2rem;
+  /* overflow: hidden; <---initially used to round image top corners, but set own radius on those to make it scrollable instead*/
+  overflow-y: auto; 
+  box-shadow: 0 2rem 2rem rgba(31, 47, 86, 0.05);  
+  
+  /* initially used position and transform properties (but switched to flexbox instead): */
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.plan-img {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.info-box {
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.title {
+  color: rgb(31, 47, 86);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.product-description {
+  color: hsl(224, 23%, 55%);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.plan-selected-box {
+  background-color:hsl(225, 100%, 98%);
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.4rem;
+}
+
+.plan-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.plan-selected {
+  color: hsl(223, 47%, 23%);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.plan-price {
+  color:hsl(224, 23%, 55%);
+  font-size: 1.6rem;
+}
+
+.plan-change {
+  border: none;
+  background: none;
+  color: hsl(245, 75%, 52%);
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-decoration: underline;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.plan-change:hover {
+  color:hsl(224, 23%, 55%);
+}
+
+.next-screen {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.07rem;
+  border: none;
+  background-color: hsl(245, 75%, 52%);
+  border-radius: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 1.5rem 1.5rem rgba(56, 41, 224, 0.15);
+  padding: 1.8rem;
+  transition: all 0.3s;
+}
+
+.next-screen:hover {
+  background-color: hsl(224, 23%, 55%);
+}
+
+.cancel {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color:hsl(224, 23%, 55%);
+  font-size: 1.4rem;
+  font-weight: 900;
+  transition: all 0.3s;
+  display: inline;
+}
+
+.cancel:hover {
+  color:hsl(223, 47%, 23%);
+}
+
+.attribution {
+  font-size: 1.1rem;
+
+  /* initially used position and transform properties (but switched to flexbox instead): */
+  /* position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%); */
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  transition: all 0.3s;
+}
+
+.attribution a:hover {
+  color:hsl(245, 75%, 52%);
+}
+
+/*-----------------------*/
+/*-----MEDIA QUERIES-----*/
+/*-----------------------*/
+
+/* ---496px breakpoint--- */
+@media(max-width: 31em){
+  .order-summary-card {
+    width: 33rem;
+  }
+
+  .info-box {
+    padding: 2.6rem;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .plan-selected-box {
+    padding: 1.8rem;
+    gap: 1.8rem;
+  }
+
+  .plan-selected,
+  .plan-price,
+  .plan-change,
+  .next-screen,
+  .cancel {
+    font-size: 1.4rem;
+  }
+}
+
+/* ---375px breakpoint--- */
+@media(max-width: 23.4375em){
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+}
