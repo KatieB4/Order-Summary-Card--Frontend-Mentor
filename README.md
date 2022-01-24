@@ -14,8 +14,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 
 ### Screenshot
-
-(images/my-desktop-view-screenshot.png)
+![desktop view screenshot](my-desktop-view-screenshot.png?raw=true "Project Screenshot")
 
 
 ### Built With
